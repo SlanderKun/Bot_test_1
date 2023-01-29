@@ -10,11 +10,12 @@ load_dotenv()
 TOKEN = os.environ.get('BOT_TOKEN')
 WEBHOOK_URL = os.environ.get('NGROK_TOKEN')
 
+app = Flask(__name__)
+
 bot = telebot.TeleBot(TOKEN)
 
 bot.set_webhook(url=WEBHOOK_URL + f'/{TOKEN}/')
 
-app = Flask(__name__)
 
 db = Factory(
     DATABASE_URI=os.environ.get('DATABASE_URI'),
