@@ -21,3 +21,20 @@ class UserService:
         except Exception as e:
             print(str(e))
 
+    @staticmethod
+    def add_display_name(telegram_id: int, display_name: str):
+        try:
+            with app.app_context():
+                user = User.query.filter_by(telegram_id=str(telegram_id)).first()
+            print(user.display_name)
+            if user == None:
+                return user
+            user.display_name = display_name
+            print(user.display_name)
+            with app.app_context():
+                db.session.commit()
+            return user
+        except Exception as e:
+            print(str(e))
+
+            
