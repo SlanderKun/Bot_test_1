@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf1afe8-680c-4d0e-a3bb-f5268fd7f285" name="Changes" comment="Push files">
-      <change afterPath="$PROJECT_DIR$/app/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flask_try2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorates/Botdecorates.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Botcontrollers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorates/Userdecorates.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usercontrollers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorates/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/UserService.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/UserService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Botcontrollers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Botcontroller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Usercontrollers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Usercontroller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="flask_try2" />
+      <module name="markettelegram_bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>

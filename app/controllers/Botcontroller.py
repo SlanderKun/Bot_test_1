@@ -39,8 +39,12 @@ def set_name(message):
 def set_name(message):
     id = message.from_user.id
     username = message.from_user.first_name
-    print(message)
+    last_name = message.from_user.last_name
+
+    if last_name != None:
+        username = str(username + ' ' + last_name)
     print(username)
+
     user = UserService.find_or_create(id, username)
     bot.reply_to(message, "Ваше имя добавлено в базу данных")
 
@@ -63,3 +67,4 @@ def set_display_name(message):
 @bot.message_handler(commands=['check'])
 def get_user(message):
     print(message)
+    
