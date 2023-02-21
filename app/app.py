@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 from app.lib.db import Factory
 from dotenv import load_dotenv
