@@ -1,10 +1,9 @@
 from flask import Flask
 from app.lib.db import Factory
-from dotenv import load_dotenv
 import telebot
 from app.services import configService
+from flask_migrate import Migrate
 
-load_dotenv()
 
 TOKEN = configService.get('BOT_TOKEN')
 WEBHOOK_URL = configService.get('NGROK_TOKEN')
@@ -20,6 +19,7 @@ db = Factory(
     DATABASE_URI=configService.get('DATABASE_URI'),
     app=app
 ).make()
+
 
 
 

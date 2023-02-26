@@ -1,4 +1,5 @@
 from app.models.User import User, db
+from app.models.Shop import Shop
 from app import app
 
 
@@ -37,4 +38,28 @@ class UserService:
         except Exception as e:
             print(str(e))
 
-            
+    @staticmethod
+    def create_shop(telegram_id: int):
+        try:
+            with app.app_context():
+                user = User.query.filter_by(telegram_id=str(telegram_id)).first()
+                print(user)
+            id = user.id
+            print(id)
+            shop = Shop()
+            shop.user_id = id
+            with app.app_context():
+                db.session.add(shop)
+                db.session.commit()
+        except Exception as e:
+            print(str(e))
+
+    @staticmethod
+    def find_shops(telegram_id: int):
+        try:
+            with app.app_context():
+                user = User.query.filter_by(telegram_id=str(telegram_id)).first()
+                print(user)
+            id = user.id
+            with app.app_context():
+                user = User.query.filter_by(telegram_id=str(telegram_id)).first()

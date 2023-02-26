@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edf1afe8-680c-4d0e-a3bb-f5268fd7f285" name="Changes" comment="Push files" />
+    <list default="true" id="edf1afe8-680c-4d0e-a3bb-f5268fd7f285" name="Changes" comment="Push files">
+      <change afterPath="$PROJECT_DIR$/app/models/Shop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Botcontrollers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Botcontrollers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/UserService.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/UserService.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +55,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sland\PycharmProjects\Bot_test_1" />
       <recent name="C:\Users\sland\PycharmProjects\flask_try2" />
     </key>
   </component>
