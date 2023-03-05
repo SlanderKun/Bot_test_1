@@ -17,11 +17,15 @@ def webhook():
         abort(403)
 
 
-@bot.message_handler(commands=['help', 'start'])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, """\
+    id = message.from_user.id
+    username = message.from_user.first_name
+    user = UserService.find_or_create(id, username)
+    chat_id = message.chat.id
+    bot.send_message(chat_id, """\
 Привет, добро пожаловать в маркетплейс.
-Чтобы зарегистрироваться пропишите команду /set_name\
+Чтобы изменить ваши данные пропишите команду /--\
 """)
 
 
