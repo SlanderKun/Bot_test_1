@@ -1,5 +1,6 @@
 from app.models.User import User, db
 from app.models.Shop import Shop
+from app.models.Item import Item
 from app import app
 
 
@@ -61,5 +62,6 @@ class UserService:
                 user = User.query.filter_by(telegram_id=str(telegram_id)).first()
                 print(user)
             id = user.id
-            with app.app_context():
-                user = User.query.filter_by(telegram_id=str(telegram_id)).first()
+
+        except Exception as e:
+            print(str(e))

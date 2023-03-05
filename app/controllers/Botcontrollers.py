@@ -65,10 +65,10 @@ def create_shop(message):
     id = message.from_user.id
     user = UserService.create_shop(id)
 
+
 @bot.message_handler(commands=['get_shop_by_user'])
 def get_shop_by_user(message):
     id = message.from_user.id
-
 
 
 @bot.message_handler(commands=['check'])

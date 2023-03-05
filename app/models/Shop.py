@@ -8,3 +8,4 @@ class Shop(db.Model):
     description = db.Column(db.String(128))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship("User", backref=db.backref("user", uselist=False))
+    items = db.relationship("Item", backref="shops")

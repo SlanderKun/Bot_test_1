@@ -2,7 +2,6 @@ from flask import Flask
 from app.lib.db import Factory
 import telebot
 from app.services import configService
-from flask_migrate import Migrate
 
 
 TOKEN = configService.get('BOT_TOKEN')
