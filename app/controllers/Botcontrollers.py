@@ -4,6 +4,7 @@ from app.app import bot
 from flask import request, render_template, abort
 import telebot
 from app.services.UserService import UserService
+from app.services.ShopServise import ShopService
 
 
 @app.route(f'/{os.getenv("BOT_TOKEN")}/', methods=['POST'])
@@ -41,12 +42,13 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['set_name'])
 def set_name(message):
+    chat_id = message.chat.id
     id = message.from_user.id
     username = message.from_user.first_name
     print(message)
     print(username)
     user = UserService.find_or_create(id, username)
-    bot.reply_to(message, "Ваше имя добавлено в базу данных")
+    bot.send_message(chat_id, "Ваше имя добавлено в базу данных")
 
 
 @bot.message_handler(commands=['set_display_name'])
@@ -67,7 +69,17 @@ def set_display_name(message):
 @bot.message_handler(commands=['create_shop'])
 def create_shop(message):
     id = message.from_user.id
-    user = UserService.create_shop(id)
+    chat_id = message.chat.id
+    shop_name = message.text
+    shop_name = shop_name[13:]
+    print(shop_name)
+    if not shop_name == '':
+        user = ShopService.find_or_create_shop(id, shop_name)
+
+    if user != None:
+        bot.send_message(chat_id, "У вас уже есть магазин с таким же именем")
+    else:
+        bot.send_message(chat_id, "Ваш магазин успешно создан")
 
 
 @bot.message_handler(commands=['get_shop_by_user'])
