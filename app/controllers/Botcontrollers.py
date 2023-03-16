@@ -20,6 +20,7 @@ def webhook():
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
+    print(message)
     id = message.from_user.id
     username = message.from_user.first_name
     user = UserService.find_or_create(id, username)
@@ -70,11 +71,17 @@ def set_display_name(message):
 def create_shop(message):
     id = message.from_user.id
     chat_id = message.chat.id
-    shop_name = message.text
-    shop_name = shop_name[13:]
+    entities = message.entities
+    if len(entities) > 1:
+        bot.send_message(chat_id, "Нельзя обработать больше 2 команд.")
+        return
+    print(entities[0].length)
+    shop_name = message.text[entities[0].length+1:]
     print(shop_name)
     if not shop_name == '':
         user = ShopService.find_or_create_shop(id, shop_name)
+    else:
+        bot.send_message(chat_id, "Введите название магазина")
 
     if user != None:
         bot.send_message(chat_id, "У вас уже есть магазин с таким же именем")

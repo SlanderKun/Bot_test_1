@@ -1,11 +1,12 @@
 from app.models.Shop import Shop, db
 from app.services.UserService import UserService
 from app import app
+from app import app
 
 
 class ShopService:
     @staticmethod
-    def find_or_create_shop(telegram_id: int, shop_name: str):
+    def find_or_create_shop(telegram_id: int, name: CreateShopDto):
         try:
             user = UserService.find_or_create(telegram_id)
             user_id = user.id
