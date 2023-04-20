@@ -1,1 +1,1 @@
-from app.services.ConfigSevice import configService
+from app.services.ConfigService import configService

@@ -1,7 +1,7 @@
 from app.dto.BaseDto import BaseDto
 
 
-class CreateShopDto(BaseDto):
+class CreateItemDto(BaseDto):
     name: str
 
     def __init__(self, config: dict):

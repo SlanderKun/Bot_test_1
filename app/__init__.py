@@ -1,2 +1,3 @@
 from .app import app
-from .controllers import Usercontrollers, Botcontrollers
+from .controllers import *
+from .api import *

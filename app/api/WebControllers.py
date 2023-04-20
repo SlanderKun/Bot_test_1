@@ -1,4 +1,4 @@
-from app.models import User
+from app.models.User import User
 from app import app
 from flask import request, render_template, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
