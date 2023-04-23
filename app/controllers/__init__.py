@@ -1,1 +1,1 @@
-from . import UsersController, ShopsController, ChatController
+from . import UsersController, ShopsController, ItemController, ChatController

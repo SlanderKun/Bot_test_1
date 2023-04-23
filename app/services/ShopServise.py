@@ -6,17 +6,17 @@ from app import app
 
 class ShopService:
     @staticmethod
-    def find_or_create_shop(telegram_id: int, name: CreateShopDto):
+    def create(telegram_id: int, dto: CreateShopDto):
         try:
             user = UserService.find_or_create(telegram_id)
             user_id = user.id
-            name = name.name
-            # with app.app_context():
-            #     shop = Shop.query.filter_by(user_id=str( == user_id)).first()
-            #     if shop != None:
-            #         return shop
+
+            shop = ShopService.find(telegram_id)
+            if shop != None:
+                return False
+
             shop = Shop()
-            shop.name = name
+            shop.name = dto.name
             shop.user_id = user_id
             with app.app_context():
                 db.session.add(shop)
@@ -25,7 +25,24 @@ class ShopService:
             print(str(e))
 
     @staticmethod
+    def find(telegram_id: int, name: str):
+        user = UserService.find_or_create(telegram_id)
+        with app.app_context():
+            shop = Shop.query.filter_by(user_id=int(user.id), name=str(name)).first()
+            return shop
+
+    @staticmethod
     def find_all_shops():
         shops = Shop.query.all()
-        print(shops)
+        shops_name = []
+        for name in shops:
+            shops_name = shops_name.append(name)
+        return shops_name
+
+    @staticmethod
+    def find_shops_by_id(telegram_id: int):
+        user = UserService.find_or_create(telegram_id)
+        with app.app_context():
+            shops = Shop.query.filter_by(user_id=int(user.id))
         return shops
+

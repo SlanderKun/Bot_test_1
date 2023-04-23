@@ -5,29 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edf1afe8-680c-4d0e-a3bb-f5268fd7f285" name="Changes" comment="Push files">
-      <change afterPath="$PROJECT_DIR$/app/api/UsersController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/WebHookController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/ChatController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/ItemController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/ShopsController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dto/CreateItemDto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dto/CreateUserDto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/UsersEncoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/ItemService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/SecurityService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Botcontrollers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UsersController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Usercontrollers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/WebControllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/UsersController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/UsersController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ChatController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ChatController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ItemController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ItemController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ShopsController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ShopsController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/UsersController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UsersController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dto/CreateShopDto.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dto/CreateShopDto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/BaseModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/BaseModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/ConfigSevice.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ConfigService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dto/CreateItemDto.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dto/CreateItemDto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Item.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/ItemService.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ItemService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/ShopServise.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ShopServise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/UserService.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/UserService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,5 +130,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Push files" />
     <option name="LAST_COMMIT_MESSAGE" value="Push files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/ShopsController.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="user" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

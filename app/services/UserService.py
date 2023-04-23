@@ -11,7 +11,6 @@ class UserService:
     def find_or_create(telegram_id: int, username=None):
         with app.app_context():
             user = User.query.filter_by(telegram_id=str(telegram_id)).first()
-            print(user)
 
             if user != None:
                 if not user.is_active:
@@ -47,7 +46,6 @@ class UserService:
         try:
             with app.app_context():
                 user = User.query.filter_by(telegram_id=str(telegram_id)).first()
-            print(user)
             id = user.id
 
         except Exception as e:

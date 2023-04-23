@@ -17,4 +17,9 @@ def text_from_user(message):
         bot.send_message(chat_id, text="Чтобы изменить никнейм пропишите команду /change_name 'НОВОЕ ИМЯ'.")
 
     elif (user_text == "Мой профиль"):
-        bot.send_message(chat_id, text="Чтобы посмотреть свой профиль напишите /profile")
+        bot.send_message(chat_id, text="Чтобы посмотреть свой профиль напишите /profile.")
+
+    elif (user_text == "❓ Как добавить предмет в магазин"):
+        bot.send_message(chat_id, text="""
+        Чтобы добавить предмет пропишите команду 
+        /create_item shop='ИМЯ ИМЕЮЩЕГО МАГАЗИНА' name='ИМЯ ПРЕДМЕТА' category='ИМЯ КАТЕГОРИИ' amount='КОЛИЧЕСТВО'""")

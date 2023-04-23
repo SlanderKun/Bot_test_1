@@ -19,11 +19,11 @@ def send_welcome(message):
     btn4 = types.KeyboardButton("❓ Как изменить никнейм")
     btn5 = types.KeyboardButton("❓ Как создать магазин")
     btn6 = types.KeyboardButton("❓ Как получить токен")
+    btn7 = types.KeyboardButton("❓ Как добавить предмет в магазин")
 
-    markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+    markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7)
     bot.send_message(chat_id, text="""\
 Привет, добро пожаловать в маркетплейс.
-Чтобы изменить ваши данные пропишите команду /--\
 """, reply_markup=markup)
 
 
@@ -83,7 +83,6 @@ def get_profile(message):
     chat_id = message.chat.id
     id = message.chat.id
     user = UserService.find_or_create(id)
-
     bot.send_message(chat_id, text=f"""\
 Ваш профиль:
 ID: {user.id}
@@ -91,7 +90,7 @@ Username: {user.username}
 Display_name: {user.display_name}
 Email: {user.email}
 Is_active: {user.is_active}
-    """)
+""")
 
 
 @bot.message_handler(commands=['get_shop_by_user'])

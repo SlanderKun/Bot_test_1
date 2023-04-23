@@ -8,6 +8,8 @@ from app.models.UsersEncoder import UsersEncoder
 
 @app.route('/users', methods=['GET'])
 def get_users():
+    token = request.headers.get("Authorization")
+    Security.authorization(token)
     users = User.query.all()
     json_users = []
     for user in users:
